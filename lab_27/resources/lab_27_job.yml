@@ -1,0 +1,19 @@
+resources:
+  jobs:
+    lab_27_job:
+      name: lab_27_job
+      queue:
+        enabled: true
+
+      tasks:
+        - task_key: notebook_task
+          notebook_task:
+            notebook_path: /..notebooks/tasks/tasks.ipynb
+      # email_notifications:
+      #   on_failure:
+      #     - labuser12807304_1763931805@vocareum.com
+      # trigger:
+      #   # Run this job every day, exactly one day from the last run; see https://docs.databricks.com/api/workspace/jobs/create#trigger
+      #   periodic:
+      #     interval: 1
+      #     unit: DAYS
